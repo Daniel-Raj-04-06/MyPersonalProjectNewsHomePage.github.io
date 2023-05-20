@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!--Navigation Bar-->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"> <svg width="65" height="40" xmlns="http://www.w3.org/2000/svg"><path d="M23.016 39.2c.317 0 .574-.093.77-.28.196-.187.294-.457.294-.812v-1.82c0-.448.033-.84.098-1.176.065-.336.145-.663.238-.98l5.09-18.122 4.822 18.57c.112.384.193.682.243.895l.023.099c.047.215.07.453.07.714v1.82c0 .355.098.625.294.812.196.187.453.28.77.28h10.696c.299 0 .55-.093.756-.28.205-.187.308-.457.308-.812v-1.82c0-.373.023-.705.07-.994.047-.29.135-.677.266-1.162L54.04 7.224c.299-1.25.765-2.254 1.4-3.01.635-.756 1.363-1.311 2.184-1.666l.672-.308c.336-.168.574-.331.714-.49.14-.159.21-.369.21-.63 0-.336-.117-.607-.35-.812C58.637.103 58.287 0 57.82 0h-8.904c-.467 0-.817.103-1.05.308-.233.205-.35.476-.35.812 0 .261.06.471.182.63.121.159.313.303.574.434l.616.224c1.12.41 1.871.999 2.254 1.764s.453 1.661.21 2.688l-5.535 23.486-6.477-25.81c-.133-.58-.17-1.018-.11-1.31l.026-.104c.093-.29.317-.49.672-.602l1.232-.336c.299-.112.518-.257.658-.434a.986.986 0 0 0 .21-.63c0-.355-.112-.63-.336-.826C41.468.098 41.122 0 40.656 0H24.78c-.448 0-.789.098-1.022.294-.233.196-.35.471-.35.826 0 .224.06.415.182.574.121.159.322.294.602.406l1.176.42c.261.093.462.243.602.448.14.205.294.607.462 1.204l1.751 6.742-5.553 19.475L16.128 4.48c-.147-.49-.194-.898-.14-1.223l.028-.135c.093-.345.327-.574.7-.686l1.456-.336c.504-.168.756-.504.756-1.008 0-.336-.112-.602-.336-.798C18.368.098 18.022 0 17.556 0H1.344C.896 0 .56.098.336.294.112.49 0 .756 0 1.092c0 .224.056.434.168.63.112.196.29.35.532.462l1.232.392c.355.13.625.308.812.532.187.224.345.579.476 1.064l7.84 30.408c.112.43.191.751.238.966.047.215.07.462.07.742v1.82c0 .355.103.625.308.812.205.187.467.28.784.28h10.556Zm34.804.7c1.195 0 2.263-.29 3.206-.868a6.338 6.338 0 0 0 2.24-2.338c.55-.98.826-2.04.826-3.178 0-1.157-.275-2.212-.826-3.164a6.325 6.325 0 0 0-2.24-2.282c-.943-.57-2.011-.854-3.206-.854-1.157 0-2.207.285-3.15.854a6.325 6.325 0 0 0-2.24 2.282c-.55.952-.826 2.007-.826 3.164 0 1.139.275 2.198.826 3.178.55.98 1.297 1.76 2.24 2.338.943.579 1.993.868 3.15.868Z" fill="#00001A"/></svg></a>
+      
+      <!--Navigation OFFCANVAS For Mobile Devices-->
+      <button id="toggleButton" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContentLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="navbarSupportedContentLabel"></h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <h5><a class="nav-link" href="#">Home</a></h5>
+            </li>
+            <li class="nav-item">
+              <h5><a class="nav-link" href="#">New</a></h5>
+            </li>
+            <li class="nav-item">
+              <h5><a class="nav-link" href="#">Popular</a></h5>
+            </li>
+            <li class="nav-item">
+              <h5><a class="nav-link" href="#">Trending</a></h5>
+            </li>
+            <li class="nav-item">
+              <h5><a class="nav-link" href="#">Categories</a></h5>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+     <!-- Navigation for Desktop Devices -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">New</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Popular</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Trending</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Categories</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!--Landing Page For Desktop-->
+  <div class="container desktop">
+      <div class="landing-picture row">
+          <img src="./assets/images/image-web-3-desktop.jpg" width="660" height="350" alt="Landing Page">
+      </div>
+      <div class="gap"></div>
+      <div class="NewContent">
+        <h1 class="NewContentcontent" style="color : goldenrod">New</h1>
+
+        <h3 class="NewContentcontent" style="color : white">Hydrogen VS Electric Car</h3>
+        <p class="NewContentcontent para" style="color : rgb(201, 199, 199)">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        <hr style="color :rgb(201, 199, 199); height:2px; width:80%; margin: 10% 10%;">
+
+        <h3 class="NewContentcontent" style="color : white">The Downsides of AI Artistry</h3>
+        <p class="NewContentcontent para" style="color : rgb(201, 199, 199)">What are the possible adverse effects of on-demand AI image generation?</p>
+        <hr style="color :rgb(201, 199, 199); height:2px; width:80%; margin: 10% 10%;">
+
+        <h3 class="NewContentcontent" style="color : white">Is VC Funding Drying Up?</h3>
+        <p class="NewContentcontent para" style="color : rgb(201, 199, 199)"> Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </div>
+      <div class="LandingPageTitle">
+        <h1 class="LandingTitle">The Bright Future of Web 3.0?</h1>
+      </div>
+      <div class="LandingPageContent">
+        <p style="color : rgb(160, 159, 159)">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+          But is it really fulfilling its promise?</p> <br>
+
+        <button class="lan-btn" type="submit">R E A D &nbsp M O R E</button>
+      </div>
+  </div>
+
+  <!--Landing Page For Mobile-->
+  <div class="container mobile">
+      <div class="col-sm-8 col-xs-8 col-md-8">
+          <img src="./assets/images/image-web-3-mobile.jpg" class="card-img-top" alt="Landing Page">
+      </div>
+      <div class="col-sm-8 col-xs-8 col-md-8">
+        <h1 class="LandingTitle">The Bright Future of Web 3.0?</h1>
+      </div>
+      <div class="col-sm-8 col-xs-8 col-md-8 LandingPageContent">
+        <p style="color : rgb(160, 159, 159)">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+          But is it really fulfilling its promise?</p> <br>
+        <button class="lan-btn" type="submit">R E A D &nbsp M O R E</button>
+      </div>
+      <div class="col-sm-8 col-xs-8 col-md-8 NewContent">
+        <h1 class="NewContentcontent" style="color : goldenrod">New</h1>
+
+        <h3 class="NewContentcontent" style="color : white">Hydrogen VS Electric Car</h3>
+        <p class="NewContentcontent para" style="color : rgb(201, 199, 199)">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        <hr style="color :rgb(201, 199, 199); height:2px; width:80%; margin: 10% 10%;">
+
+        <h3 class="NewContentcontent" style="color : white">The Downsides of AI Artistry</h3>
+        <p class="NewContentcontent para" style="color : rgb(201, 199, 199)">What are the possible adverse effects of on-demand AI image generation?</p>
+        <hr style="color :rgb(201, 199, 199); height:2px; width:80%; margin: 10% 10%;">
+
+        <h3 class="NewContentcontent" style="color : white">Is VC Funding Drying Up?</h3>
+        <p class="NewContentcontent para end" style="color : rgb(201, 199, 199)"> Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </div>
+  </div>
+
+  <!--Products Page-->
+  <div class="product-container">
+      <div class="col-lg-4 col-xl-4 col-sm-8 col-xs-8 col-md-8 product-box">
+        <div class="grid-item">
+          <div class="image-container">
+            <img src="./assets/images/image-retro-pcs.jpg" alt="Image">
+          </div>
+          <div class="content-container">
+            <h1 style="color : rgb(160, 159, 159)">01</h1>
+            <h1 style="font-weight: 800;">Reviving Retro PCs</h1>
+            <p style="color : rgb(160, 159, 159)">What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-xl-4 col-sm-8 col-xs-8 col-md-8 product-box">
+        <div class="grid-item">
+          <div class="image-container">
+            <img src="./assets/images/image-top-laptops.jpg" alt="Image">
+          </div>
+          <div class="content-container">
+            <h1 style="color : rgb(160, 159, 159)">02</h1>
+            <h1 style="font-weight: 800;">Top 10 Laptops of 2022</h1>
+            <p style="color : rgb(160, 159, 159)">Our best picks for various needs <br>and budgets.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-xl-4 col-sm-8 col-xs-8 col-md-8 product-box">
+        <div class="grid-item">
+          <div class="image-container">
+            <img src="./assets/images/image-gaming-growth.jpg" alt="Image">
+          </div>
+          <div class="content-container">
+            <h1 style="color : rgb(160, 159, 159)">03</h1>
+            <h1 style="font-weight: 800;">The Growth of Gaming</h1>
+            <p style="color : rgb(160, 159, 159)">How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://daniel-raj-04-06.github.io/cv/">Daniel Raj</a>.
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script>
+    var toggleButton = document.getElementById('toggleButton');
+    var offcanvasMenu = document.getElementById('navbarSupportedContent');
+    offcanvasMenu.addEventListener('hidden.bs.offcanvas', function () {
+      toggleButton.classList.remove('d-none');
+    });
+    offcanvasMenu.addEventListener('shown.bs.offcanvas', function () {
+      toggleButton.classList.add('d-none');
+    });
+  </script>
+</body>
+</html>

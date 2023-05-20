@@ -1,0 +1,264 @@
+body{
+    padding : 3% 7%;
+  }
+
+  /*Navigation STyling */
+
+  .nav-link{
+    margin-right : 1.5rem;
+  }
+
+  .nav-link:hover{
+    color: rgb(250, 75, 75);
+  }
+
+  .navbar{
+    margin-bottom: 1.7rem;
+    background-color: white !important;
+  }
+
+  @media (min-width: 992px) {
+    .offcanvas {
+    display: none;
+  }
+}
+
+  @media (max-width: 991.98px) {
+    .offcanvas {
+    display: block !important;
+    transform: none !important;
+  }
+}
+
+/*Landing Page Styling For Desktop*/
+
+.container.desktop{
+    background-color: #fff; 
+    display: grid;
+    grid-template-rows: 350px 330px;
+    grid-template-columns: 330px 330px 70px 350px;
+    gap:0px;
+    height : 680px;
+    width: 1080px;
+    margin-bottom: 55px;
+}
+
+.container.desktop .row
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container.desktop .landing-picture{
+    grid-column: span 2;
+}
+
+.container.desktop .gap{
+    background-color: white;
+    grid-row: span 2;
+}
+
+.container.desktop .NewContent{
+    background-color: rgb(3, 3, 41);
+    grid-row: span 2;
+}
+
+.container.desktop .NewContentcontent
+{
+    margin: 20px;
+}
+
+.container.desktop .LandingPageTitle{
+    display: flex;
+    align-items: flex-end;
+}
+
+.container.desktop .LandingTitle{
+    font-size: 4.3rem;
+    margin-bottom: 15%;
+    text-align: left;
+}
+
+.container.desktop .lan-btn{
+    background-color: rgb(250, 75, 75);
+    color : white;
+    width : 200px;
+    height : 30px;
+    border : none;
+    border-radius: 5px;
+    margin-left: 10%;
+}
+
+.container.desktop button:hover{
+    background-color: black;
+    color : white;
+}
+
+.container.desktop .LandingPageContent p{
+    margin-top: 15%;
+    margin-left: 10%;
+    font-size: 1rem;
+}
+
+@media (min-width: 993px) {
+    .container.mobile{
+        display:none;
+    }
+  }
+
+/* Styles for mobile */
+
+.content.mobile .card{
+    border : none !important;
+}
+
+.content.mobile .card-title{
+    border : none !important;
+}
+
+.container.mobile .LandingTitle{
+    font-size: 4rem;
+    font-weight: 500;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.container.mobile .LandingPageContent{
+   margin-bottom: 7%;
+}
+
+
+.container.mobile .LandingPageContent p{
+    font-size: 1.5rem;
+}
+
+.container.mobile .lan-btn{
+    background-color: rgb(250, 75, 75);
+    color : white;
+    width : 200px;
+    height : 50px;
+    border : none;
+    border-radius: 5px;
+}
+
+.container.mobile button:hover{
+    background-color: black;
+    color : white;
+}
+
+.container.mobile .NewContent{
+    margin-top: 5%;
+    padding-top: 6%;
+    background-color: rgb(3, 3, 41);
+    padding-bottom: 6%;
+}
+
+.container.mobile .NewContentcontent
+{
+    margin: 5% 10%;
+}
+
+
+@media (max-width: 992px) {
+    .container.desktop{
+        display: none;
+    }
+
+    .container.mobile{
+        display:block;
+    }
+    body{
+        padding : 0;
+    }
+}
+/*Product Page*/
+
+.product-container {
+    max-width: 71.25rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 1.25rem;
+    height: 15rem;
+  }
+  
+  .grid-item {
+    background-color: #fff;
+    display: flex;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .content-container{
+    padding-left: 2rem;
+  }
+  
+  .image-container img {
+    width: 150px;
+    height: 200px;
+  }
+  
+  .product-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
+  }
+  
+  .product-container p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  @media (max-width: 992px) {
+    .product-container {
+        width:369px;
+        margin: 0 ;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        height: auto; /* Set height to auto */
+        overflow-x: hidden;
+      }
+
+    .grid-item {
+        background-color: #fff;
+        text-align: left;
+        margin: 7% 0;
+      }
+
+    .content-container{
+        margin-left : 0%;
+    }
+       
+    .image-container img {
+        padding-left: 10%;
+        width: 150px;
+        height: 180px;
+    }
+  
+    .product-container h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.625rem;
+     }
+  
+    .product-container p {
+        font-size: 1rem;
+        color: #555;
+    } 
+
+    .product-box{
+        width:369px;
+  }
+  }
+  
+  @media (max-width: 992px) {
+    .attribution { font-size: 11px; text-align: center; padding-top: 2rem;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  }
+ 
+  @media (min-width: 992px) {
+    .attribution { font-size: 11px; text-align: center; padding-top: 5rem;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  }
+ 
